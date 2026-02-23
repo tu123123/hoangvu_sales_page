@@ -2,8 +2,10 @@
 
 import { useState, useMemo, useCallback, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { getData2 } from "./config";
+import { getData } from "./config";
 import { formatNumber } from "./e2e";
+import Image from "next/image";
+import noimage from "./noimage.svg";
 
 const ITEMS_PER_PAGE = 8;
 
@@ -235,10 +237,12 @@ interface loaisanphamtype {
   gia: number;
   img: string;
   mota: string;
+  id: string;
   ten: string;
 }
 interface mathangtype {
   gia: number;
+  id: string;
   img: string;
   mota: string;
   ten: string;
@@ -287,10 +291,10 @@ export function PricingSection() {
   const startItem = (currentPage - 1) * ITEMS_PER_PAGE + 1;
   const endItem = Math.min(currentPage * ITEMS_PER_PAGE, totalItems);
   useEffect(() => {
-    getData2("mathang", (e: mathangtype[]) => {
+    getData("mathang", (e: mathangtype[]) => {
       setMathang(e);
     });
-    getData2(
+    getData(
       "loaisanpham",
       (
         e: {
@@ -358,7 +362,7 @@ export function PricingSection() {
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {paginatedRetail.map((product) => (
                 <div
-                  key={product.ten}
+                  key={product.id}
                   className="group rounded-xl border border-border bg-card p-6 transition-all duration-200 hover:shadow-md hover:border-primary/30"
                 >
                   <div className="flex items-start justify-between gap-3">
@@ -371,10 +375,10 @@ export function PricingSection() {
                   </p>
                   <div className="mt-4 flex items-baseline gap-1 border-t border-border pt-4">
                     <span className="text-2xl font-semibold text-foreground">
-                      {formatNumber(product.gia)}
+                      {product.gia > 0 ? formatNumber(product.gia) : ""}
                     </span>
                     <span className="text-sm text-muted-foreground">
-                      {"VND"}
+                      {product.gia > 0 ? "VND" : "Giá liên hệ"}
                     </span>
                   </div>
                 </div>
@@ -384,7 +388,7 @@ export function PricingSection() {
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {paginatedArrangement.map((product) => (
                 <div
-                  key={product.ten}
+                  key={product.id}
                   className="group relative rounded-xl border border-border bg-card p-6 transition-all duration-200 hover:shadow-md hover:border-primary/30"
                 >
                   {/* {"tag" in product && product.tag && (
@@ -396,19 +400,30 @@ export function PricingSection() {
                     {product.ten}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                    <Image
+                      height={150}
+                      width={150}
+                      style={{
+                        width: "auto",
+                      }}
+                      src={product.img || noimage}
+                      alt=""
+                    ></Image>
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
                     {product.mota}
                   </p>
                   <div className="mt-4 flex items-baseline gap-1 border-t border-border pt-4">
                     <span className="text-2xl font-semibold text-foreground">
-                      {formatNumber(product.gia)}
+                      {product.gia > 0 ? formatNumber(product.gia) : ""}
                     </span>
                     <span className="text-sm text-muted-foreground">
-                      {"VND"}
+                      {product.gia > 0 ? "VND" : "Giá liên hệ"}
                     </span>
                   </div>
-                  <button className="mt-4 w-full rounded-lg bg-primary/10 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
-                    Đặt Hàng
-                  </button>
+                  {/* <button className="mt-4 w-full rounded-lg bg-primary/10 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
+                    Liên hệ
+                  </button> */}
                 </div>
               ))}
             </div>

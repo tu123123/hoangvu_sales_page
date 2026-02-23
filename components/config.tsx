@@ -13,14 +13,15 @@ import {
 import { getStorage, ref, uploadBytes } from "firebase/storage";
 import moment from "moment";
 const firebaseConfig = {
-    apiKey: "AIzaSyDBor-yNScm2Oq-IJ0O6AloyQCwpCLolM0",
-    authDomain: "fbapp-ce8ce.firebaseapp.com",
-    databaseURL: "https://fbapp-ce8ce-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "fbapp-ce8ce",
-    storageBucket: "fbapp-ce8ce.appspot.com",
-    messagingSenderId: "458942500126",
-    appId: "1:458942500126:web:08434aafe4e2d9570d8d0f",
-    measurementId: "G-B47RZHN8PZ"
+  apiKey: "AIzaSyDBor-yNScm2Oq-IJ0O6AloyQCwpCLolM0",
+  authDomain: "fbapp-ce8ce.firebaseapp.com",
+  databaseURL:
+    "https://fbapp-ce8ce-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "fbapp-ce8ce",
+  storageBucket: "fbapp-ce8ce.appspot.com",
+  messagingSenderId: "458942500126",
+  appId: "1:458942500126:web:08434aafe4e2d9570d8d0f",
+  measurementId: "G-B47RZHN8PZ",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -38,20 +39,17 @@ const getData2 = async (db: any, action: any, sql?: any) => {
     }
   );
 };
-const getData = async (db: any, action: any, sql?: any) => {
-  onSnapshot(
-    query(
-      collection(firestore, db),
-      sql || where("time", "!=", ""),
-      orderBy("time", "asc")
-    ),
-    (querySnapshot: any) => {
-      action(
-        querySnapshot.docs
-          .map((doc: any) => ({ ...doc.data(), id: doc.id }))
-          .filter((i: any) => !i.delete)
-      );
-    }
+const getData = async (db: string, action: any, sql?: any) => {
+  const q = query(
+    collection(firestore, db),
+    sql || where("time", "!=", ""),
+    orderBy("time", "asc")
+  );
+  const querySnapshot = await getDocs(q);
+  action(
+    querySnapshot.docs
+      .map((doc: any) => ({ ...doc.data(), id: doc.id }))
+      .filter((i: any) => !i.delete)
   );
 };
 const addData = async (db: any, data: any, success: any, err?: any) => {
