@@ -6,7 +6,10 @@ import "./globals.css";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://bloomandco.vn";
 const SITE_NAME = "HoangVu Flower";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const inter = Inter({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-inter",
+});
 const dmSerif = DM_Serif_Display({
   weight: "400",
   subsets: ["latin"],
@@ -22,6 +25,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  verification: {
+    google: "LVouD9v-NQCGzPBQX4pq4wKoTpqX7cOsx5KhJ9YBGqg",
+  },
+
   metadataBase: new URL(SITE_URL),
   title: {
     default: "HoangVu Flower | Hoa Tươi Đà Lạt - Giao Hoa Tận Nơi",
@@ -124,7 +131,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
-      <body className={`font-sans antialiased`}>
+      <body className={`${inter.className} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

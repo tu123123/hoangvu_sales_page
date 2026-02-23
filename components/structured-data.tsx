@@ -213,14 +213,14 @@ export function StructuredData() {
           text: "Có, gói đăng ký hoa hàng tuần bắt đầu từ 250.000 VND/lần giao. Bạn có thể chọn mẫu hoặc để nghệ nhân hoa chọn cho bạn.",
         },
       },
-      {
-        "@type": "Question",
-        name: "HoangVu Flower có mở lớp học cắm hoa không?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Có, chúng tôi thường xuyên tổ chức các buổi workshop cắm hoa với nghệ nhân chuyên nghiệp, phù hợp cho cả cá nhân và teambuilding.",
-        },
-      },
+      // {
+      //   "@type": "Question",
+      //   name: "HoangVu Flower có mở lớp học cắm hoa không?",
+      //   acceptedAnswer: {
+      //     "@type": "Answer",
+      //     text: "Có, chúng tôi thường xuyên tổ chức các buổi workshop cắm hoa với nghệ nhân chuyên nghiệp, phù hợp cho cả cá nhân và teambuilding.",
+      //   },
+      // },
     ],
   };
 

@@ -202,21 +202,23 @@ function Pagination({
         <ChevronLeft className="h-4 w-4" />
       </button>
 
-      {pages.map((page) => (
-        <button
-          key={page}
-          onClick={() => onPageChange(page)}
-          aria-current={currentPage === page ? "page" : undefined}
-          aria-label={`Trang ${page}`}
-          className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-medium transition-colors ${
-            currentPage === page
-              ? "bg-primary text-primary-foreground shadow-sm"
-              : "border border-border bg-card text-muted-foreground hover:bg-secondary hover:text-foreground"
-          }`}
-        >
-          {page}
-        </button>
-      ))}
+      {pages
+        .filter((p) => Math.abs(p - currentPage) <= 1)
+        .map((page) => (
+          <button
+            key={page}
+            onClick={() => onPageChange(page)}
+            aria-current={currentPage === page ? "page" : undefined}
+            aria-label={`Trang ${page}`}
+            className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-medium transition-colors ${
+              currentPage === page
+                ? "bg-primary text-primary-foreground shadow-sm"
+                : "border border-border bg-card text-muted-foreground hover:bg-secondary hover:text-foreground"
+            }`}
+          >
+            {page}
+          </button>
+        ))}
 
       <button
         onClick={() => onPageChange(currentPage + 1)}
@@ -398,7 +400,7 @@ export function PricingSection() {
                   </p>
                   <div className="mt-4 flex items-baseline gap-1 border-t border-border pt-4">
                     <span className="text-2xl font-semibold text-foreground">
-                      {product.gia}
+                      {formatNumber(product.gia)}
                     </span>
                     <span className="text-sm text-muted-foreground">
                       {"VND"}
