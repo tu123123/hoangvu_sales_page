@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "HoangVu Flower - Hoa Tươi Đà Lạt",
     short_name: "HoangVu Flower",
     description:
-      "Hoa Tươi Đà Lạt được giao tận tay bạn. Giao hoa trong ngày tại TP.HCM.",
+      "Hoa Tươi Đà Lạt được giao tận tay bạn. Giao hoa trong ngày tại Đà Lạt và các tỉnh lân cận. Chất lượng hoa tươi lâu, đa dạng mẫu mã.",
     start_url: "/",
     display: "standalone",
     background_color: "#f5f0e8",
