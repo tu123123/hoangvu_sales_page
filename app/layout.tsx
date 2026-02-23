@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s | HoangVu Flower",
   },
   description:
-    "Hoa Tươi Đà Lạt được giao tận tay bạn. Bó hoa theo mùa, hoa cưới, cắm hoa sự kiện và thiết kế riêng bởi nghệ nhân hoa chuyên nghiệp. Giao hoa trong ngày tại TP.HCM.",
+    "Hoa Tươi Đà Lạt được giao tận tay bạn. Bó hoa theo mùa, hoa cưới, cắm hoa sự kiện và thiết kế riêng bởi nghệ nhân hoa chuyên nghiệp. Giao hoa trong ngày tại TP.Đà Lạt.",
   keywords: [
     "giao hoa tươi",
     "bó hoa",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "hoa theo mùa",
     "nghệ nhân hoa",
     "đặt hoa online",
-    "hoa tươi TP.HCM",
+    "hoa tươi Đà Lạt",
     "shop hoa tươi",
     "hoa sinh nhật",
     "hoa khai trương",

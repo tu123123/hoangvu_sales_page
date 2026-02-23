@@ -64,7 +64,7 @@ export function StructuredData() {
     "@type": "WebSite",
     name: "HoangVu Flower",
     url: SITE_URL,
-    description: "Hoa Tươi Đà Lạt - Giao hoa tận nơi tại TP.HCM",
+    description: "Hoa Tươi Đà Lạt - Giao hoa tận nơi tại TP.Đà Lạt",
     inLanguage: "vi-VN",
     potentialAction: {
       "@type": "SearchAction",
@@ -194,7 +194,7 @@ export function StructuredData() {
         name: "HoangVu Flower có giao hoa trong ngày không?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Có, đặt hàng trước 14h sẽ được giao trong cùng ngày tại khu vực TP.HCM.",
+          text: "Có, đặt hàng trước 14h sẽ được giao trong cùng ngày tại khu vực TP.Đà Lạt.",
         },
       },
       {
