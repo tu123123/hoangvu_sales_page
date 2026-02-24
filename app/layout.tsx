@@ -38,6 +38,7 @@ export const metadata: Metadata = {
   description:
     "Hoa Tươi Đà Lạt được giao tận tay bạn. Bó hoa theo mùa, hoa cưới, cắm hoa sự kiện và thiết kế riêng bởi nghệ nhân hoa chuyên nghiệp. Giao hoa trong ngày tại TP.Đà Lạt.",
   keywords: [
+    "hoa tươi Hoàng Vũ",
     "giao hoa tươi",
     "bó hoa",
     "cắm hoa nghệ thuật",
