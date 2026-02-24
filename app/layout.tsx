@@ -3,8 +3,7 @@ import { DM_Serif_Display, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://hoatuoihoangvu.xyz";
+const SITE_URL = "https://hoatuoihoangvu.xyz";
 const SITE_NAME = "Hoàng Vũ Flower";
 
 const inter = Inter({
