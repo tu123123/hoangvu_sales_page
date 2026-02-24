@@ -49,10 +49,10 @@ export function StorySection() {
               Bắt Nguồn Từ Đam Mê, Phát Triển Với Mục Đích
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              Thành lập năm 2018, HoangVu Flower khởi đầu là một xưởng nhỏ với
-              niềm tin đơn giản: hoa phải chân thực như chính vẻ đẹp của chúng.
-              Chúng tôi hợp tác trực tiếp với các nhà vườn địa phương để mang
-              đến cho bạn những bông hoa tươi nhất, rực rỡ nhất.
+              Hoàng Vũ Flower khởi đầu là một xưởng nhỏ với niềm tin đơn giản:
+              hoa phải chân thực như chính vẻ đẹp của chúng. Chúng tôi hợp tác
+              trực tiếp với các nhà vườn địa phương để mang đến cho bạn những
+              bông hoa tươi nhất, rực rỡ nhất.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
               Ngày nay, đội ngũ nghệ nhân hoa đam mê của chúng tôi thiết kế hàng

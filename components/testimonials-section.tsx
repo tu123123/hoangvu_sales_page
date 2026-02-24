@@ -3,14 +3,14 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "HoangVu Flower đã biến đám cưới của chúng tôi thành thiên đường hoa. Mỗi tác phẩm đều vượt xa mọi tưởng tượng của tôi.",
+      "Hoàng Vũ Flower đã biến đám cưới của chúng tôi thành thiên đường hoa. Mỗi tác phẩm đều vượt xa mọi tưởng tượng của tôi.",
     author: "Thanh Mai",
     role: "Cô dâu, Mùa hè 2025",
     rating: 5,
   },
   {
     quote:
-      "Năm ngoái chúng tôi chuyển sang dùng hoa của HoangVu Flower cho văn phòng. Chất lượng ổn định, thiết kế luôn mới mẻ và khách hàng liên tục khen ngợi.",
+      "Năm ngoái chúng tôi chuyển sang dùng hoa của Hoàng Vũ Flower cho văn phòng. Chất lượng ổn định, thiết kế luôn mới mẻ và khách hàng liên tục khen ngợi.",
     author: "Minh Tuấn",
     role: "Quản lý văn phòng, Tập đoàn Hưng Phát",
     rating: 5,

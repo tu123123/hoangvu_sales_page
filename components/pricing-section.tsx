@@ -2,12 +2,12 @@
 
 import { useState, useMemo, useCallback, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { getData } from "./config";
+import { getData, getData2 } from "./config";
 import { formatNumber } from "./e2e";
 import Image from "next/image";
 import noimage from "./noimage.svg";
 
-const ITEMS_PER_PAGE = 8;
+const ITEMS_PER_PAGE = 15;
 
 const retailProducts = [
   {
@@ -275,12 +275,12 @@ export function PricingSection() {
 
   const handleRetailPage = useCallback((page: number) => {
     setRetailPage(page);
-    document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+    // document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
   const handleArrangementPage = useCallback((page: number) => {
     setArrangementPage(page);
-    document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+    // document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
   const currentPage = activeTab === "retail" ? retailPage : arrangementPage;
@@ -359,22 +359,42 @@ export function PricingSection() {
         {/* Content */}
         <div className="mt-8">
           {activeTab === "retail" ? (
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            // <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            //   {paginatedRetail.map((product) => (
+            //     <div
+            //       key={product.id}
+            //       className="group rounded-xl border border-border bg-card p-6 transition-all duration-200 hover:shadow-md hover:border-primary/30"
+            //     >
+            //       <div className="flex items-start justify-between gap-3">
+            //         <h3 className="font-serif text-lg text-card-foreground">
+            //           {product.ten}
+            //         </h3>
+            //       </div>
+            //       <p className="mt-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+            //         {/* {product.description} */}
+            //       </p>
+            //       <div className="mt-4 flex items-baseline gap-1 border-t border-border pt-4">
+            //         <span className="text-2xl font-semibold text-foreground">
+            //           {product.gia > 0 ? formatNumber(product.gia) : ""}
+            //         </span>
+            //         <span className="text-sm text-muted-foreground">
+            //           {product.gia > 0 ? "VND" : "Giá liên hệ"}
+            //         </span>
+            //       </div>
+            //     </div>
+            //   ))}
+            // </div>
+            <div className="listproduct">
               {paginatedRetail.map((product) => (
-                <div
-                  key={product.id}
-                  className="group rounded-xl border border-border bg-card p-6 transition-all duration-200 hover:shadow-md hover:border-primary/30"
-                >
+                <div key={product.id} className="productitem">
                   <div className="flex items-start justify-between gap-3">
                     <h3 className="font-serif text-lg text-card-foreground">
                       {product.ten}
                     </h3>
                   </div>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
-                    {/* {product.description} */}
-                  </p>
-                  <div className="mt-4 flex items-baseline gap-1 border-t border-border pt-4">
-                    <span className="text-2xl font-semibold text-foreground">
+                  <p>{/* {product.description} */}</p>
+                  <div className="">
+                    <span className="text-1xl font-semibold text-foreground">
                       {product.gia > 0 ? formatNumber(product.gia) : ""}
                     </span>
                     <span className="text-sm text-muted-foreground">

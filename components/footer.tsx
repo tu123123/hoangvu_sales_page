@@ -36,7 +36,7 @@ export function Footer() {
             <div className="flex items-center gap-2">
               <LeafIcon className="h-6 w-6 text-primary" />
               <span className="font-serif text-lg text-foreground">
-                HoangVu Flower
+                Hoàng Vũ Flower
               </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground max-w-xs">
@@ -73,7 +73,7 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
           <p className="text-xs text-muted-foreground">
-            {"2026 HoangVu Flower Bảo lưu mọi quyền."}
+            {"2026 Hoàng Vũ Flower Bảo lưu mọi quyền."}
           </p>
           <div className="flex gap-6">
             <Link

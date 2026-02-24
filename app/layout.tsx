@@ -5,7 +5,7 @@ import "./globals.css";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://hoangvu-sales-page.vercel.app";
-const SITE_NAME = "HoangVu Flower";
+const SITE_NAME = "Hoàng Vũ Flower";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
 
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "HoangVu Flower | Hoa Tươi Đà Lạt - Giao Hoa Tận Nơi",
-    template: "%s | HoangVu Flower",
+    default: "Hoàng Vũ Flower | Hoa Tươi Đà Lạt - Giao Hoa Tận Nơi",
+    template: "%s | Hoàng Vũ Flower",
   },
   description:
     "Hoa Tươi Đà Lạt được giao tận tay bạn. Bó hoa theo mùa, hoa cưới, cắm hoa sự kiện và thiết kế riêng bởi nghệ nhân hoa chuyên nghiệp. Giao hoa trong ngày tại TP.Đà Lạt.",
@@ -49,8 +49,39 @@ export const metadata: Metadata = {
     "shop hoa tươi",
     "hoa sinh nhật",
     "hoa khai trương",
+    "hoa hoàng vũ",
+    "bán hoa hoàng vũ",
+    "cây hoa hoàng vũ",
     "hoa chia buồn",
     "hoa sự kiện",
+    "shop bán hoa hoàng vũ online",
+    "hoa hoàng vũ giao tận nơi",
+    "hoa hoàng vũ tặng người yêu",
+    "hoa hoàng vũ trang trí phòng khách",
+    "hoa hoàng vũ Lâm Đồng",
+    "hoa hoàng vũ Đà Lạt",
+    "shop hoa hoàng vũ TP.HCM",
+    "hoa hoàng vũ Hà Nội",
+    "hoa tặng bạn gái",
+    "hoa Đà Lạt",
+    "shop hoa Đà Lạt",
+    "điện hoa Đà Lạt",
+    "dịch vụ cắm hoa",
+    "mua hoa Đà Lạt online giao tận nơi",
+    "điện hoa Đà Lạt giao nhanh trong ngày",
+    "học cắm hoa nghệ thuật tại Đà Lạt",
+    "dịch vụ cắm hoa tươi đẹp uy tín Đà Lạt",
+    "shop hoa Đà Lạt giá rẻ",
+    "hoa sinh nhật Đà Lạt",
+    "hoa sinh nhật Đà Lạt",
+    "hoa khai trương Đà Lạt",
+    "hoa cưới Đà Lạt",
+    "hoa tang lễ Đà Lạt",
+    "hoa chúc mừng Đà Lạt",
+    "shop hoa tươi Lâm Đồng",
+    "điện hoa nhanh TP Đà Lạt",
+    "dịch vụ giao hoa tận nơi Đà Lạt",
+    "nghệ thuật cắm hoa",
     "dịch vụ cắm hoa",
     "hoa bàn tiệc",
     "hoa trang trí",
@@ -70,7 +101,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "HoangVu Flower | Hoa Tươi Đà Lạt - Giao Hoa Tận Nơi",
+    title: "Hoàng Vũ Flower | Hoa Tươi Đà Lạt - Giao Hoa Tận Nơi",
     description:
       "Hoa Tươi Đà Lạt được giao tận tay bạn. Bó hoa theo mùa, hoa cưới và thiết kế riêng bởi nghệ nhân hoa chuyên nghiệp.",
     url: SITE_URL,
@@ -82,13 +113,13 @@ export const metadata: Metadata = {
         url: "/images/hero-flowers.jpg",
         width: 1200,
         height: 630,
-        alt: "HoangVu Flower - Hoa Tươi Đà Lạt",
+        alt: "Hoàng Vũ Flower - Hoa Tươi Đà Lạt",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "HoangVu Flower | Hoa Tươi Đà Lạt",
+    title: "Hoàng Vũ Flower | Hoa Tươi Đà Lạt",
     description: "Hoa Tươi Đà Lạt được giao tận tay bạn. Giao hoa trong ngày.",
     images: ["/images/hero-flowers.jpg"],
   },
