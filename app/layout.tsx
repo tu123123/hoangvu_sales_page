@@ -96,9 +96,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   alternates: {
-    canonical: "/",
+    canonical: SITE_URL,
     languages: {
-      "vi-VN": "/",
+      "vi-VN": SITE_URL,
     },
   },
   openGraph: {
