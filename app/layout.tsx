@@ -25,9 +25,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  verification: {
-    google: "HBwip1gOC4lO1V5HBKdevbZXOHm5e9onGFswWesDjGU",
-  },
+  // verification: {
+  //   google: "HBwip1gOC4lO1V5HBKdevbZXOHm5e9onGFswWesDjGU",
+  // },
 
   metadataBase: new URL(SITE_URL),
   title: {
