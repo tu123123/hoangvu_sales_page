@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   verification: {
-    google: "LVouD9v-NQCGzPBQX4pq4wKoTpqX7cOsx5KhJ9YBGqg",
+    google: "HBwip1gOC4lO1V5HBKdevbZXOHm5e9onGFswWesDjGU",
   },
 
   metadataBase: new URL(SITE_URL),
