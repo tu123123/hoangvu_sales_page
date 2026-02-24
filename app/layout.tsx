@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://hoangvu-sales-page.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://hoatuoihoangvu.xyz";
 const SITE_NAME = "Hoàng Vũ Flower";
 
 const inter = Inter({
