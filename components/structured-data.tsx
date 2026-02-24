@@ -1,5 +1,5 @@
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://hoangvu-sales-page.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://hoatuoihoangvu.xyz";
 
 export function StructuredData() {
   const localBusiness = {
