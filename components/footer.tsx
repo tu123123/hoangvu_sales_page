@@ -2,27 +2,27 @@ import Link from "next/link";
 
 const footerLinks = {
   "Cửa Hàng": [
-    { label: "Bó Hoa Theo Mùa", href: "#" },
-    { label: "Hoa Khô", href: "#" },
-    { label: "Đăng Ký Định Kỳ", href: "#" },
-    { label: "Phiếu Quà Tặng", href: "#" },
+    { label: "Bộ Sưu Tập", href: "/#collections" },
+    { label: "Bảng Giá", href: "/#pricing" },
+    { label: "Đánh Giá", href: "/#testimonials" },
+    { label: "Đặt Hoa Ngay", href: "/lien-he" },
   ],
   "Dịch Vụ": [
-    { label: "Hoa Cưới", href: "#" },
-    { label: "Doanh Nghiệp", href: "#" },
-    { label: "Lớp Học", href: "#" },
-    { label: "Chia Buồn", href: "#" },
+    { label: "Hoa Cưới", href: "/#services" },
+    { label: "Doanh Nghiệp", href: "/#services" },
+    { label: "Lớp Học", href: "/#services" },
+    { label: "Chia Buồn", href: "/#services" },
   ],
   "Công Ty": [
-    { label: "Câu Chuyện", href: "#story" },
-    { label: "Bền Vững", href: "#" },
-    { label: "Tuyển Dụng", href: "#" },
-    { label: "Báo Chí", href: "#" },
+    { label: "Giới Thiệu", href: "/gioi-thieu" },
+    { label: "Tin Tức", href: "/tin-tuc" },
+    { label: "Câu Chuyện", href: "/#story" },
+    { label: "Liên Hệ", href: "/lien-he" },
   ],
   "Hỗ Trợ": [
-    { label: "Liên Hệ", href: "#contact" },
-    { label: "Thông Tin Giao Hàng", href: "#" },
-    { label: "Câu Hỏi Thường Gặp", href: "#" },
+    { label: "Liên Hệ", href: "/lien-he" },
+    { label: "Câu Hỏi Thường Gặp", href: "/lien-he" },
+    { label: "Thông Tin Giao Hàng", href: "/lien-he" },
     { label: "Chính Sách Bảo Mật", href: "#" },
   ],
 };
