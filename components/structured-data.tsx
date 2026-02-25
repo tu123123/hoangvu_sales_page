@@ -135,55 +135,7 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Sản phẩm hoa tươi Hoàng Vũ Flower",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        item: {
-          "@type": "Product",
-          name: "Hồng Đỏ Ecuador",
-          description:
-            "Hoa hồng nhập khẩu Ecuador tươi lâu, thân dài, màu đỏ thắm",
-          offers: {
-            "@type": "Offer",
-            price: "85000",
-            priceCurrency: "VND",
-            availability: "https://schema.org/InStock",
-          },
-        },
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        item: {
-          "@type": "Product",
-          name: "Mẫu Đơn Hồng",
-          description: "Peony hồng phấn mềm mại, hương thơm nhẹ nhàng",
-          offers: {
-            "@type": "Offer",
-            price: "120000",
-            priceCurrency: "VND",
-            availability: "https://schema.org/InStock",
-          },
-        },
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        item: {
-          "@type": "Product",
-          name: "Giỏ Hoa Sinh Nhật",
-          description:
-            "Giỏ hoa tươi phối theo tone màu yêu cầu, kèm thiệp chúc mừng",
-          offers: {
-            "@type": "Offer",
-            price: "450000",
-            priceCurrency: "VND",
-            availability: "https://schema.org/InStock",
-          },
-        },
-      },
-    ],
+    itemListElement: [],
   };
 
   const faqSchema = {
