@@ -7,9 +7,19 @@ import { Calendar, ArrowRight, Tag } from "lucide-react"
 import { featuredPost, posts, categories } from "@/lib/news-data"
 
 export const metadata: Metadata = {
-  title: "Tin Tức",
+  title: "Tin Tức - Hoa Tươi Hoàng Vũ Đà Lạt",
   description:
     "Cập nhật tin tức mới nhất về hoa tươi, mẹo cắm hoa, xu hướng hoa và các sự kiện tại Hoa Tươi Hoàng Vũ Đà Lạt.",
+  alternates: {
+    canonical: "https://hoatuoihoangvu.xyz/tin-tuc",
+  },
+  openGraph: {
+    title: "Tin Tức - Hoa Tươi Hoàng Vũ Đà Lạt",
+    description:
+      "Cập nhật tin tức, mẹo cắm hoa, xu hướng và các sự kiện mới nhất từ Hoa Tươi Hoàng Vũ.",
+    url: "https://hoatuoihoangvu.xyz/tin-tuc",
+    type: "website",
+  },
 }
 
 export default function NewsPage() {

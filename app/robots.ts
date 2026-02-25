@@ -1,6 +1,6 @@
-import type { MetadataRoute } from "next";
+import type { MetadataRoute } from "next"
 
-const SITE_URL = "https://hoatuoihoangvu.xyz";
+const SITE_URL = "https://hoatuoihoangvu.xyz"
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/admin/"],
+        disallow: ["/api/", "/admin/", "/_next/", "/scripts/"],
       },
       {
         userAgent: "Googlebot",
@@ -18,7 +18,12 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "Googlebot-Image",
         allow: "/images/",
       },
+      {
+        userAgent: "Bingbot",
+        allow: "/",
+      },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
-  };
+    host: SITE_URL,
+  }
 }

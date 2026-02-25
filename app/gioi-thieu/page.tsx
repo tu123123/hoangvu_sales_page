@@ -6,9 +6,19 @@ import { Footer } from "@/components/footer";
 import { Leaf, Heart, Truck, Award, Users, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Giới Thiệu",
+  title: "Giới Thiệu - Hoa Tươi Hoàng Vũ Đà Lạt",
   description:
     "Tìm hiểu về Hoa Tươi Hoàng Vũ - xưởng thiết kế hoa nghệ thuật tại Đà Lạt với hơn 10 năm kinh nghiệm mang vẻ đẹp thiên nhiên đến tận nhà bạn.",
+  alternates: {
+    canonical: "https://hoatuoihoangvu.xyz/gioi-thieu",
+  },
+  openGraph: {
+    title: "Giới Thiệu - Hoa Tươi Hoàng Vũ Đà Lạt",
+    description:
+      "Hơn 10 năm kinh nghiệm mang vẻ đẹp thiên nhiên Đà Lạt đến tận nhà bạn. Đội ngũ nghệ nhân chuyên nghiệp, tận tâm.",
+    url: "https://hoatuoihoangvu.xyz/gioi-thieu",
+    type: "website",
+  },
 };
 
 const milestones = [

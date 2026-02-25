@@ -21,8 +21,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!post) return { title: "Không tìm thấy bài viết" }
 
   return {
-    title: post.title,
+    title: `${post.title} | Hoa Tươi Hoàng Vũ`,
     description: post.excerpt,
+    alternates: {
+      canonical: `https://hoatuoihoangvu.xyz/tin-tuc/${slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://hoatuoihoangvu.xyz/tin-tuc/${slug}`,
+      type: "article",
+      images: [
+        {
+          url: post.image,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
   }
 }
 
