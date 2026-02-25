@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const SITE_URL = "https://hoatuoihoangvu.xyz";
-const SITE_NAME = "Hoàng Vũ Flower";
+const SITE_NAME = "Hoa Tươi Hoàng Vũ";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
 
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Hoàng Vũ Flower | Hoa Tươi Đà Lạt - Giao Hoa Tận Nơi",
-    template: "%s | Hoàng Vũ Flower",
+    default: "Hoa tươi Hoàng Vũ | Hoa Tươi Đà Lạt - Giao Hoa Tận Nơi",
+    template: "%s | Hoa tươi Hoàng Vũ",
   },
   description:
     "Hoa Tươi Đà Lạt được giao tận tay bạn. Bó hoa theo mùa, hoa cưới, cắm hoa sự kiện và thiết kế riêng bởi nghệ nhân hoa chuyên nghiệp. Giao hoa trong ngày tại TP.Đà Lạt.",
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Hoàng Vũ Flower | Hoa Tươi Đà Lạt - Giao Hoa Tận Nơi",
+    title: "Hoa tươi Hoàng Vũ | Hoa Tươi Đà Lạt - Giao Hoa Tận Nơi",
     description:
       "Hoa Tươi Đà Lạt được giao tận tay bạn. Bó hoa theo mùa, hoa cưới và thiết kế riêng bởi nghệ nhân hoa chuyên nghiệp.",
     url: SITE_URL,
@@ -113,13 +113,13 @@ export const metadata: Metadata = {
         url: "/images/hero-flowers.jpg",
         width: 1200,
         height: 630,
-        alt: "Hoàng Vũ Flower - Hoa Tươi Đà Lạt",
+        alt: "Hoa tươi Hoàng Vũ - Hoa Tươi Đà Lạt",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hoàng Vũ Flower | Hoa Tươi Đà Lạt",
+    title: "Hoa tươi Hoàng Vũ | Hoa Tươi Đà Lạt",
     description: "Hoa Tươi Đà Lạt được giao tận tay bạn. Giao hoa trong ngày.",
     images: ["/images/hero-flowers.jpg"],
   },
@@ -150,6 +150,24 @@ export const metadata: Metadata = {
       },
     ],
     apple: "/apple-icon.png",
+  },
+
+  other: {
+    "application/ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Florist",
+      name: "Hoa tươi Hoàng Vũ",
+      image: "https://hoatuoihoangvu.xyz/images/hero-flowers.jpg",
+      url: "https://hoatuoihoangvu.xyz",
+      telephone: "+84 383 420 994",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "306 Nguyên Tử Lực",
+        addressLocality: "Đà Lạt",
+        addressRegion: "Lâm Đồng",
+        addressCountry: "VN",
+      },
+    }),
   },
 };
 

@@ -22,7 +22,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-2">
           <LeafIcon className="h-7 w-7 text-primary" />
           <span className="font-serif text-xl tracking-tight text-foreground">
-            Hoàng Vũ Flower
+            Hoa tươi Hoàng Vũ
           </span>
         </Link>
 

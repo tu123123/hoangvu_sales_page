@@ -34,7 +34,7 @@ export function CtaSection() {
           {submitted ? (
             <div className="mt-10 rounded-lg bg-primary/10 p-6">
               <p className="font-serif text-lg text-foreground">
-                Chào mừng đến với Hoàng Vũ Flower
+                Chào mừng đến với Hoa tươi Hoàng Vũ
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
                 {

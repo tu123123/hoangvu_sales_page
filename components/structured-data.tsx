@@ -5,7 +5,7 @@ export function StructuredData() {
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "Florist",
-    name: "Hoàng Vũ Flower",
+    name: "Hoa tươi Hoàng Vũ",
     image: `${SITE_URL}/images/hero-flowers.jpg`,
     url: SITE_URL,
     telephone: "+84-28-1234-5678",
@@ -63,7 +63,7 @@ export function StructuredData() {
   const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Hoàng Vũ Flower",
+    name: "Hoa tươi Hoàng Vũ",
     url: SITE_URL,
     description: "Hoa Tươi Đà Lạt - Giao hoa tận nơi tại TP.Đà Lạt",
     inLanguage: "vi-VN",
@@ -80,7 +80,7 @@ export function StructuredData() {
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Hoàng Vũ Flower",
+    name: "Hoa tươi Hoàng Vũ",
     url: SITE_URL,
     logo: `${SITE_URL}/icon.svg`,
     description:
@@ -134,7 +134,7 @@ export function StructuredData() {
   const products = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Sản phẩm hoa tươi Hoàng Vũ Flower",
+    name: "Sản phẩm hoa tươi Hoa tươi Hoàng Vũ",
     itemListElement: [],
   };
 
@@ -144,7 +144,7 @@ export function StructuredData() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Hoàng Vũ Flower có giao hoa trong ngày không?",
+        name: "Hoa tươi Hoàng Vũ có giao hoa trong ngày không?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Có, đặt hàng trước 14h sẽ được giao trong cùng ngày tại khu vực TP.Đà Lạt.",
@@ -152,7 +152,7 @@ export function StructuredData() {
       },
       {
         "@type": "Question",
-        name: "Hoàng Vũ Flower có nhận cắm hoa cưới không?",
+        name: "Hoa tươi Hoàng Vũ có nhận cắm hoa cưới không?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Có, chúng tôi cung cấp dịch vụ cắm hoa cưới trọn gói bao gồm tư vấn, thiết kế, giao hàng và lắp đặt.",
@@ -168,7 +168,7 @@ export function StructuredData() {
       },
       // {
       //   "@type": "Question",
-      //   name: "Hoàng Vũ Flower có mở lớp học cắm hoa không?",
+      //   name: "Hoa tươi Hoàng Vũ có mở lớp học cắm hoa không?",
       //   acceptedAnswer: {
       //     "@type": "Answer",
       //     text: "Có, chúng tôi thường xuyên tổ chức các buổi workshop cắm hoa với nghệ nhân chuyên nghiệp, phù hợp cho cả cá nhân và teambuilding.",

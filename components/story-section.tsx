@@ -49,7 +49,7 @@ export function StorySection() {
               Bắt Nguồn Từ Đam Mê, Phát Triển Với Mục Đích
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              Hoàng Vũ Flower khởi đầu là một xưởng nhỏ với niềm tin đơn giản:
+              Hoa tươi Hoàng Vũ khởi đầu là một xưởng nhỏ với niềm tin đơn giản:
               hoa phải chân thực như chính vẻ đẹp của chúng. Chúng tôi hợp tác
               trực tiếp với các nhà vườn địa phương để mang đến cho bạn những
               bông hoa tươi nhất, rực rỡ nhất.

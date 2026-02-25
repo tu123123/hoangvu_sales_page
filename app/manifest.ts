@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Hoàng Vũ Flower - Hoa Tươi Đà Lạt",
-    short_name: "Hoàng Vũ Flower",
+    name: "Hoa tươi Hoàng Vũ - Hoa Tươi Đà Lạt",
+    short_name: "Hoa tươi Hoàng Vũ",
     description:
       "Hoa Tươi Đà Lạt được giao tận tay bạn. Giao hoa trong ngày tại Đà Lạt và các tỉnh lân cận. Chất lượng hoa tươi lâu, đa dạng mẫu mã.",
     start_url: "/",
