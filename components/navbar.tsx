@@ -5,12 +5,11 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Bộ Sưu Tập", href: "#collections" },
-  { label: "Bảng Giá", href: "#pricing" },
-  { label: "Câu Chuyện", href: "#story" },
-  { label: "Dịch Vụ", href: "#services" },
-  { label: "Đánh Giá", href: "#testimonials" },
-  { label: "Liên Hệ", href: "#contact" },
+  { label: "Giới Thiệu", href: "/gioi-thieu" },
+  { label: "Bộ Sưu Tập", href: "/#collections" },
+  { label: "Dịch Vụ", href: "/#services" },
+  { label: "Tin Tức", href: "/tin-tuc" },
+  { label: "Liên Hệ", href: "/lien-he" },
 ];
 
 export function Navbar() {
@@ -40,7 +39,7 @@ export function Navbar() {
 
         <div className="hidden lg:flex lg:items-center lg:gap-4">
           <Link
-            href="#contact"
+            href="/lien-he"
             className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Đặt Hoa Ngay
@@ -70,7 +69,7 @@ export function Navbar() {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="/lien-he"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
