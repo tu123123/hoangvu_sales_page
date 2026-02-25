@@ -1,6 +1,5 @@
 "use client"
 
-import type { Metadata } from "next"
 import Image from "next/image"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
@@ -10,12 +9,12 @@ import { useState } from "react"
 const contactInfo = [
   {
     icon: MapPin,
-    title: "Dia Chi",
-    details: ["306 Nguyen Tu Luc, Phuong 8", "TP. Da Lat, Lam Dong"],
+    title: "Địa Chỉ",
+    details: ["306 Nguyên Tử Lực, Phường 8", "TP. Đà Lạt, Lâm Đồng"],
   },
   {
     icon: Phone,
-    title: "Dien Thoai",
+    title: "Điện Thoại",
     details: ["0977 625 859", "0357 577 926"],
   },
   {
@@ -25,31 +24,31 @@ const contactInfo = [
   },
   {
     icon: Clock,
-    title: "Gio Mo Cua",
-    details: ["Thu 2 - Chu Nhat: 7:00 - 21:00", "Giao hoa trong ngay truoc 14:00"],
+    title: "Giờ Mở Cửa",
+    details: ["Thứ 2 - Chủ Nhật: 7:00 - 21:00", "Giao hoa trong ngày trước 14:00"],
   },
 ]
 
 const faqItems = [
   {
-    question: "Thoi gian giao hoa la bao lau?",
+    question: "Thời gian giao hoa là bao lâu?",
     answer:
-      "Chung toi giao hoa trong ngay voi don hang dat truoc 14:00. Doi voi don hang gap, vui long goi truc tiep de duoc ho tro.",
+      "Chúng tôi giao hoa trong ngày với đơn hàng đặt trước 14:00. Đối với đơn hàng gấp, vui lòng gọi trực tiếp để được hỗ trợ.",
   },
   {
-    question: "Co the dat hoa theo yeu cau rieng khong?",
+    question: "Có thể đặt hoa theo yêu cầu riêng không?",
     answer:
-      "Co! Chung toi nhan thiet ke hoa theo yeu cau rieng cua ban. Vui long lien he som it nhat 1-2 ngay de chung toi chuan bi tot nhat.",
+      "Có! Chúng tôi nhận thiết kế hoa theo yêu cầu riêng của bạn. Vui lòng liên hệ sớm ít nhất 1-2 ngày để chúng tôi chuẩn bị tốt nhất.",
   },
   {
-    question: "Pham vi giao hoa o dau?",
+    question: "Phạm vi giao hoa ở đâu?",
     answer:
-      "Hien tai chung toi giao hoa trong TP. Da Lat va cac vung lan can. Doi voi cac dia diem xa hon, vui long lien he de biet chi tiet.",
+      "Hiện tại chúng tôi giao hoa trong TP. Đà Lạt và các vùng lân cận. Đối với các địa điểm xa hơn, vui lòng liên hệ để biết chi tiết.",
   },
   {
-    question: "Phuong thuc thanh toan nhu the nao?",
+    question: "Phương thức thanh toán như thế nào?",
     answer:
-      "Chung toi chap nhan thanh toan bang tien mat, chuyen khoan ngan hang va cac vi dien tu pho bien (MoMo, ZaloPay).",
+      "Chúng tôi chấp nhận thanh toán bằng tiền mặt, chuyển khoản ngân hàng và các ví điện tử phổ biến (MoMo, ZaloPay).",
   },
 ]
 
@@ -81,7 +80,7 @@ export default function ContactPage() {
           <div className="absolute inset-0 -z-10">
             <Image
               src="/images/contact-hero.jpg"
-              alt="Cua hang Hoa Tuoi Hoang Vu"
+              alt="Cửa hàng Hoa Tươi Hoàng Vũ"
               fill
               className="object-cover"
               priority
@@ -91,14 +90,14 @@ export default function ContactPage() {
           <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
             <div className="max-w-2xl">
               <p className="text-sm font-medium uppercase tracking-widest text-primary-foreground/80">
-                Lien He
+                Liên Hệ
               </p>
               <h1 className="mt-4 font-serif text-5xl leading-tight text-primary-foreground md:text-7xl md:leading-tight text-balance">
-                Ket Noi Voi Chung Toi
+                Kết Nối Với Chúng Tôi
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-primary-foreground/90 max-w-lg">
-                Ban co cau hoi hoac muon dat hoa? Lien he voi chung toi bat cu
-                luc nao, chung toi luon san sang ho tro ban.
+                Bạn có câu hỏi hoặc muốn đặt hoa? Liên hệ với chúng tôi bất cứ
+                lúc nào, chúng tôi luôn sẵn sàng hỗ trợ bạn.
               </p>
             </div>
           </div>
@@ -111,10 +110,10 @@ export default function ContactPage() {
               {/* Contact Information */}
               <div className="lg:col-span-2">
                 <p className="text-sm font-medium uppercase tracking-widest text-primary">
-                  Thong Tin Lien He
+                  Thông Tin Liên Hệ
                 </p>
                 <h2 className="mt-3 font-serif text-3xl text-foreground md:text-4xl">
-                  Chung Toi O Day
+                  Chúng Tôi Ở Đây
                 </h2>
                 <div className="mt-8 flex flex-col gap-6">
                   {contactInfo.map((info) => (
@@ -149,7 +148,7 @@ export default function ContactPage() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Vi tri Hoa Tuoi Hoang Vu tren ban do"
+                    title="Vị trí Hoa Tươi Hoàng Vũ trên bản đồ"
                   />
                 </div>
               </div>
@@ -158,11 +157,11 @@ export default function ContactPage() {
               <div className="lg:col-span-3">
                 <div className="rounded-lg bg-secondary p-8 lg:p-10">
                   <h2 className="font-serif text-2xl text-foreground">
-                    Gui Tin Nhan Cho Chung Toi
+                    Gửi Tin Nhắn Cho Chúng Tôi
                   </h2>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Dien vao form ben duoi, chung toi se phan hoi trong thoi gian
-                    som nhat.
+                    Điền vào form bên dưới, chúng tôi sẽ phản hồi trong thời gian
+                    sớm nhất.
                   </p>
 
                   {submitted ? (
@@ -171,17 +170,17 @@ export default function ContactPage() {
                         <Send className="h-6 w-6 text-primary" />
                       </div>
                       <p className="mt-4 font-serif text-lg text-foreground">
-                        Cam on ban da lien he!
+                        Cảm ơn bạn đã liên hệ!
                       </p>
                       <p className="mt-2 text-sm text-muted-foreground">
-                        Chung toi se phan hoi trong vong 24 gio. Neu can gap, vui
-                        long goi truc tiep cho chung toi.
+                        Chúng tôi sẽ phản hồi trong vòng 24 giờ. Nếu cần gấp, vui
+                        lòng gọi trực tiếp cho chúng tôi.
                       </p>
                       <button
                         onClick={() => setSubmitted(false)}
                         className="mt-4 text-sm font-medium text-primary hover:underline"
                       >
-                        Gui tin nhan khac
+                        Gửi tin nhắn khác
                       </button>
                     </div>
                   ) : (
@@ -192,7 +191,7 @@ export default function ContactPage() {
                             htmlFor="name"
                             className="text-sm font-medium text-foreground"
                           >
-                            Ho va Ten *
+                            Họ và Tên *
                           </label>
                           <input
                             id="name"
@@ -202,7 +201,7 @@ export default function ContactPage() {
                             onChange={(e) =>
                               setFormData({ ...formData, name: e.target.value })
                             }
-                            placeholder="Nguyen Van A"
+                            placeholder="Nguyễn Văn A"
                             className="mt-2 w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                           />
                         </div>
@@ -211,7 +210,7 @@ export default function ContactPage() {
                             htmlFor="phone"
                             className="text-sm font-medium text-foreground"
                           >
-                            So Dien Thoai *
+                            Số Điện Thoại *
                           </label>
                           <input
                             id="phone"
@@ -249,7 +248,7 @@ export default function ContactPage() {
                           htmlFor="subject"
                           className="text-sm font-medium text-foreground"
                         >
-                          Chu De
+                          Chủ Đề
                         </label>
                         <select
                           id="subject"
@@ -259,12 +258,12 @@ export default function ContactPage() {
                           }
                           className="mt-2 w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                         >
-                          <option value="">Chon chu de</option>
-                          <option value="order">Dat Hoa</option>
-                          <option value="wedding">Hoa Cuoi & Su Kien</option>
-                          <option value="corporate">Hop Tac Doanh Nghiep</option>
-                          <option value="class">Lop Hoc Cam Hoa</option>
-                          <option value="other">Khac</option>
+                          <option value="">Chọn chủ đề</option>
+                          <option value="order">Đặt Hoa</option>
+                          <option value="wedding">Hoa Cưới & Sự Kiện</option>
+                          <option value="corporate">Hợp Tác Doanh Nghiệp</option>
+                          <option value="class">Lớp Học Cắm Hoa</option>
+                          <option value="other">Khác</option>
                         </select>
                       </div>
                       <div>
@@ -272,7 +271,7 @@ export default function ContactPage() {
                           htmlFor="message"
                           className="text-sm font-medium text-foreground"
                         >
-                          Noi Dung *
+                          Nội Dung *
                         </label>
                         <textarea
                           id="message"
@@ -285,7 +284,7 @@ export default function ContactPage() {
                               message: e.target.value,
                             })
                           }
-                          placeholder="Cho chung toi biet ban can gi..."
+                          placeholder="Cho chúng tôi biết bạn cần gì..."
                           className="mt-2 w-full resize-none rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                         />
                       </div>
@@ -293,7 +292,7 @@ export default function ContactPage() {
                         type="submit"
                         className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                       >
-                        Gui Tin Nhan
+                        Gửi Tin Nhắn
                         <Send className="h-4 w-4" />
                       </button>
                     </form>
@@ -309,10 +308,10 @@ export default function ContactPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-sm font-medium uppercase tracking-widest text-primary">
-                Cau Hoi Thuong Gap
+                Câu Hỏi Thường Gặp
               </p>
               <h2 className="mt-3 font-serif text-4xl text-foreground md:text-5xl text-balance">
-                Ban Can Biet Gi?
+                Bạn Cần Biết Gì?
               </h2>
             </div>
             <div className="mx-auto mt-16 max-w-3xl flex flex-col divide-y divide-border">

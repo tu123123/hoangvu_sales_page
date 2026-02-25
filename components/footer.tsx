@@ -44,7 +44,7 @@ export function Footer() {
               bạn
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground max-w-xs">
-              Địc chỉ: 306 Nguyên Tử Lực, Phường 8, Đà Lạt
+              Địa chỉ: 306 Nguyên Tử Lực, Phường 8, Đà Lạt
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground max-w-xs">
               SĐT: 0977625859 - 0357577926
