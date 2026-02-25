@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import { MapPin, Phone, Clock, Mail, Send } from "lucide-react"
-import { useState } from "react"
+import Image from "next/image";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { MapPin, Phone, Clock, Mail, Send } from "lucide-react";
+import { useState } from "react";
 
 const contactInfo = [
   {
@@ -25,9 +25,12 @@ const contactInfo = [
   {
     icon: Clock,
     title: "Giờ Mở Cửa",
-    details: ["Thứ 2 - Chủ Nhật: 7:00 - 21:00", "Giao hoa trong ngày trước 14:00"],
+    details: [
+      "Thứ 2 - Chủ Nhật: 7:00 - 21:00",
+      "Giao hoa trong ngày trước 14:00",
+    ],
   },
-]
+];
 
 const faqItems = [
   {
@@ -50,7 +53,7 @@ const faqItems = [
     answer:
       "Chúng tôi chấp nhận thanh toán bằng tiền mặt, chuyển khoản ngân hàng và các ví điện tử phổ biến (MoMo, ZaloPay).",
   },
-]
+];
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -59,17 +62,17 @@ export default function ContactPage() {
     email: "",
     subject: "",
     message: "",
-  })
-  const [submitted, setSubmitted] = useState(false)
-  const [openFaq, setOpenFaq] = useState<number | null>(0)
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     if (formData.name && formData.phone && formData.message) {
-      setSubmitted(true)
-      setFormData({ name: "", phone: "", email: "", subject: "", message: "" })
+      setSubmitted(true);
+      setFormData({ name: "", phone: "", email: "", subject: "", message: "" });
     }
-  }
+  };
 
   return (
     <>
@@ -141,7 +144,7 @@ export default function ContactPage() {
                 {/* Map embed */}
                 <div className="mt-8 aspect-[4/3] overflow-hidden rounded-lg border border-border">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.310!2d108.438!3d11.946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDU2JzQ1LjYiTiAxMDjCsDI2JzE2LjgiRQ!5e0!3m2!1svi!2s!4v1"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5412.3670381528145!2d108.44785262324186!3d11.974313905599912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31711295eaf2e087%3A0xf941fe6301268fd1!2zMzA2IMSQxrDhu51uZyBOZ3V5w6puIFThu60gTOG7sWMsIFBoxrDhu51uZyA4LCDEkMOgIEzhuqF0LCBMw6JtIMSQ4buTbmcgNjcxNDYxLCBWaeG7h3QgTmFt!5e1!3m2!1svi!2s!4v1772001805284!5m2!1svi!2s"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -160,8 +163,8 @@ export default function ContactPage() {
                     Gửi Tin Nhắn Cho Chúng Tôi
                   </h2>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Điền vào form bên dưới, chúng tôi sẽ phản hồi trong thời gian
-                    sớm nhất.
+                    Điền vào form bên dưới, chúng tôi sẽ phản hồi trong thời
+                    gian sớm nhất.
                   </p>
 
                   {submitted ? (
@@ -173,8 +176,8 @@ export default function ContactPage() {
                         Cảm ơn bạn đã liên hệ!
                       </p>
                       <p className="mt-2 text-sm text-muted-foreground">
-                        Chúng tôi sẽ phản hồi trong vòng 24 giờ. Nếu cần gấp, vui
-                        lòng gọi trực tiếp cho chúng tôi.
+                        Chúng tôi sẽ phản hồi trong vòng 24 giờ. Nếu cần gấp,
+                        vui lòng gọi trực tiếp cho chúng tôi.
                       </p>
                       <button
                         onClick={() => setSubmitted(false)}
@@ -184,7 +187,10 @@ export default function ContactPage() {
                       </button>
                     </div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-5">
+                    <form
+                      onSubmit={handleSubmit}
+                      className="mt-8 flex flex-col gap-5"
+                    >
                       <div className="grid gap-5 sm:grid-cols-2">
                         <div>
                           <label
@@ -218,7 +224,10 @@ export default function ContactPage() {
                             required
                             value={formData.phone}
                             onChange={(e) =>
-                              setFormData({ ...formData, phone: e.target.value })
+                              setFormData({
+                                ...formData,
+                                phone: e.target.value,
+                              })
                             }
                             placeholder="0912 345 678"
                             className="mt-2 w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
@@ -254,14 +263,19 @@ export default function ContactPage() {
                           id="subject"
                           value={formData.subject}
                           onChange={(e) =>
-                            setFormData({ ...formData, subject: e.target.value })
+                            setFormData({
+                              ...formData,
+                              subject: e.target.value,
+                            })
                           }
                           className="mt-2 w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                         >
                           <option value="">Chọn chủ đề</option>
                           <option value="order">Đặt Hoa</option>
                           <option value="wedding">Hoa Cưới & Sự Kiện</option>
-                          <option value="corporate">Hợp Tác Doanh Nghiệp</option>
+                          <option value="corporate">
+                            Hợp Tác Doanh Nghiệp
+                          </option>
                           <option value="class">Lớp Học Cắm Hoa</option>
                           <option value="other">Khác</option>
                         </select>
@@ -318,9 +332,7 @@ export default function ContactPage() {
               {faqItems.map((faq, index) => (
                 <div key={faq.question} className="py-5">
                   <button
-                    onClick={() =>
-                      setOpenFaq(openFaq === index ? null : index)
-                    }
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
                     className="flex w-full items-center justify-between text-left"
                     aria-expanded={openFaq === index}
                   >
@@ -364,5 +376,5 @@ export default function ContactPage() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

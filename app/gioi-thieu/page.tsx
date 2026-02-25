@@ -1,15 +1,15 @@
-import type { Metadata } from "next"
-import Image from "next/image"
-import Link from "next/link"
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import { Leaf, Heart, Truck, Award, Users, MapPin } from "lucide-react"
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { Leaf, Heart, Truck, Award, Users, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Giới Thiệu",
   description:
     "Tìm hiểu về Hoa Tươi Hoàng Vũ - xưởng thiết kế hoa nghệ thuật tại Đà Lạt với hơn 10 năm kinh nghiệm mang vẻ đẹp thiên nhiên đến tận nhà bạn.",
-}
+};
 
 const milestones = [
   {
@@ -36,7 +36,7 @@ const milestones = [
     description:
       "Trở thành một trong những thương hiệu hoa tươi được yêu thích nhất tại Đà Lạt với hàng ngàn khách hàng thân thiết.",
   },
-]
+];
 
 const teamMembers = [
   {
@@ -60,14 +60,14 @@ const teamMembers = [
     description:
       "Thu Hà đảm bảo mọi đơn hàng đều được xử lý nhanh chóng và chăm sóc khách hàng một cách tận tâm nhất.",
   },
-]
+];
 
 const stats = [
   { icon: Heart, value: "5,000+", label: "Khách Hàng Hài Lòng" },
   { icon: Truck, value: "10,000+", label: "Đơn Hoa Đã Giao" },
   { icon: Award, value: "10+", label: "Năm Kinh Nghiệm" },
   { icon: Users, value: "15+", label: "Nghệ Nhân Hoa" },
-]
+];
 
 export default function AboutPage() {
   return (
@@ -114,15 +114,16 @@ export default function AboutPage() {
                   Mang Thiên Nhiên Vào Cuộc Sống
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                  Hoa Tươi Hoàng Vũ ra đời từ niềm tin rằng mỗi bông hoa đều mang
-                  một thông điệp. Chúng tôi không chỉ bán hoa, mà còn truyền tải
-                  cảm xúc, tình yêu và sự trân trọng qua từng cánh hoa tươi.
+                  Hoa Tươi Hoàng Vũ ra đời từ niềm tin rằng mỗi bông hoa đều
+                  mang một thông điệp. Chúng tôi không chỉ bán hoa, mà còn
+                  truyền tải cảm xúc, tình yêu và sự trân trọng qua từng cánh
+                  hoa tươi.
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                   Mỗi bó hoa đều được nghệ nhân chăm chút từ tay, từ khâu chọn
-                  hoa tại vườn địa phương cho đến khi giao tận tay bạn. Chúng tôi
-                  cam kết mang đến những bông hoa tươi nhất, đẹp nhất với giá cả
-                  hợp lý nhất.
+                  hoa tại vườn địa phương cho đến khi giao tận tay bạn. Chúng
+                  tôi cam kết mang đến những bông hoa tươi nhất, đẹp nhất với
+                  giá cả hợp lý nhất.
                 </p>
                 <div className="mt-8 flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-primary" />
@@ -199,7 +200,7 @@ export default function AboutPage() {
                 hoa và sự tận tâm với khách hàng.
               </p>
             </div>
-            <div className="mt-16 grid gap-8 md:grid-cols-3">
+            {/* <div className="mt-16 grid gap-8 md:grid-cols-3">
               {teamMembers.map((member) => (
                 <div key={member.name} className="group">
                   <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
@@ -221,7 +222,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -259,5 +260,5 @@ export default function AboutPage() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
