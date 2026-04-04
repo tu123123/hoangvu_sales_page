@@ -1,26 +1,32 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { products } from "@/lib/products-data";
+import imgdefault from './default.jpg'
 import Link from "next/link";
 import Image from "next/image";
 import { ShoppingCart } from "lucide-react";
-
+import { getData } from "@/components/config";
+import { Input } from "@/components/ui/input";
+interface mathangtype {
+  gia: number;
+  id: string;
+  img: string;
+  mota: string;
+  ten: string;
+}
 const categories = [
   "Tất Cả",
-  "Bó Hoa Theo Mùa",
-  "Hoa Cưới",
-  "Hoa Tang Lễ",
-  "Hoa Sự Kiện",
-  "Hoa Trang Trí",
-  "Thiết Kế Riêng",
+  "Hoa",
+  "Phụ liệu cắm hoa",
 ];
 
 export default function MenuPage() {
   const [selectedCategory, setSelectedCategory] = useState("Tất Cả");
-
+  const [search,setSearch]=useState('')
+ const [mathang, setMathang] = useState<mathangtype[]>([]);
   const filteredProducts = useMemo(() => {
     if (selectedCategory === "Tất Cả") {
       return products;
@@ -31,7 +37,11 @@ export default function MenuPage() {
   const formatPrice = (price: number) => {
     return price.toLocaleString("vi-VN") + " ₫";
   };
-
+ useEffect(()=>{
+   getData("mathang", (e: mathangtype[]) => {
+      setMathang(e.sort((a, b) => a.ten.localeCompare(b.ten, 'vi')));
+    });
+ },[])
   return (
     <>
       <Navbar />
@@ -54,6 +64,9 @@ export default function MenuPage() {
           {/* Category Filter */}
           <div className="mb-12">
             <div className="flex flex-wrap gap-3">
+              <Input  onChange={(e)=>{
+                setSearch(e.target.value)
+              }} placeholder="Tìm kiếm..."></Input>
               {categories.map((category) => (
                 <button
                   key={category}
@@ -72,7 +85,7 @@ export default function MenuPage() {
 
           {/* Products Grid */}
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {filteredProducts.map((product) => (
+            {mathang.filter((e)=>e.ten?.toLowerCase().includes(search?.toLowerCase())).map((product) => (
               <article
                 key={product.id}
                 className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-all duration-300 hover:shadow-lg hover:border-primary/50"
@@ -80,17 +93,14 @@ export default function MenuPage() {
                 {/* Product Image */}
                 <div className="relative aspect-square overflow-hidden bg-muted">
                   <Image
-                    src={product.image}
-                    alt={product.name}
+                    src={product.img||imgdefault}
+                    alt={product.ten}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute top-3 right-3">
                     <span className="rounded-full bg-background/90 px-3 py-1 text-xs font-medium text-foreground backdrop-blur-sm">
-                      {product.category === "Hoa Cưới" || 
-                       product.category === "Thiết Kế Riêng"
-                        ? "Cao Cấp"
-                        : "Phổ Biến"}
+                     {"Phổ Biến"}
                     </span>
                   </div>
                 </div>
@@ -99,18 +109,24 @@ export default function MenuPage() {
                 <div className="flex flex-1 flex-col justify-between p-5">
                   <div>
                     <h3 className="font-serif text-lg text-foreground leading-snug group-hover:text-primary transition-colors">
-                      {product.name}
+                      {product.ten}
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
-                      {product.description}
+                      {product.mota}
                     </p>
                   </div>
 
                   {/* Price and Button */}
                   <div className="mt-5 flex items-end justify-between gap-3">
+                    
                     <div className="text-xl font-serif text-primary font-semibold">
-                      {formatPrice(product.price)}
+                      {formatPrice(product.gia)} <span style={{
+                        fontSize:'15px'
+                      }}>
+                         (giá tham khảo)
+                      </span>
                     </div>
+                    
                     <Link
                       href="/lien-he"
                       className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 active:scale-95"
