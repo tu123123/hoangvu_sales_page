@@ -18,13 +18,22 @@ interface mathangtype {
   ten: string;
 }
 const categories = [
-  "Tất Cả",
-  "Hoa",
-  "Phụ liệu cắm hoa",
+ {
+  ten:'Tất cả',
+  key:''
+ },
+  {
+  ten:'Hoa',
+  key:'hoa'
+ },
+  {
+  ten:'Phụ liệu',
+  key:'pl'
+ }
 ];
 
 export default function MenuPage() {
-  const [selectedCategory, setSelectedCategory] = useState("Tất Cả");
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [search,setSearch]=useState('')
  const [mathang, setMathang] = useState<mathangtype[]>([]);
   const filteredProducts = useMemo(() => {
@@ -69,15 +78,15 @@ export default function MenuPage() {
               }} placeholder="Tìm kiếm..."></Input>
               {categories.map((category) => (
                 <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
+                  key={category.ten}
+                  onClick={() => setSelectedCategory(category.key)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                    selectedCategory === category
+                    selectedCategory === category.key
                       ? "bg-primary text-primary-foreground"
                       : "bg-muted text-muted-foreground hover:bg-border"
                   }`}
                 >
-                  {category}
+                  {category.ten}
                 </button>
               ))}
             </div>
@@ -85,7 +94,7 @@ export default function MenuPage() {
 
           {/* Products Grid */}
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {mathang.filter((e)=>e.ten?.toLowerCase().includes(search?.toLowerCase())).map((product) => (
+            {mathang.filter(e=>!selectedCategory||e.category?.includes(selectedCategory)).filter((e)=>e.ten?.toLowerCase().includes(search?.toLowerCase())).map((product) => (
               <article
                 key={product.id}
                 className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-all duration-300 hover:shadow-lg hover:border-primary/50"
